@@ -1,0 +1,26 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/indexStyles.css">
+</head>
+<body>
+  <button onclick="window.location.href='/new'">New Message</button>
+    <ul>
+        <% messages.forEach(message => { %>
+        <li>
+            <h2>User: <%= message.user %></h2>
+            <h2>Message: <%= message.text %></h2>
+            <h3>Added at: <%= message.added %></h3>
+            <button> details </button>
+        </li>
+        <% }); %>
+    </ul>
+    
+
+</body>
+
+  <body></body>
+</html>
