@@ -9,18 +9,16 @@
 <body>
   <button onclick="window.location.href='/new'">New Message</button>
     <ul>
-        <% messages.forEach(message => { %>
+        <% messages.forEach((message ,index)=> { %>
         <li>
             <h2>User: <%= message.user %></h2>
             <h2>Message: <%= message.text %></h2>
             <h3>Added at: <%= message.added %></h3>
-            <button> details </button>
+            <button onclick="window.location.href='/message/<%= index %> '"> open </button>
         </li>
         <% }); %>
     </ul>
     
 
 </body>
-
-  <body></body>
 </html>
